@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>MPENGS Admin</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">    
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	
+      img {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 5px;
+		width: 150px;
+	}
+
+	img:hover {
+		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+    </style>
+
+    <link href="/css/admin.css" rel="stylesheet">
+  </head>
+  <body>
+	  {{> panelsidebar}}  
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+	    
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	      <h1 class="h2">Admin {{username}}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+		  <a href="/panel/people" class="btn btn-sm btn-outline-secondary">All People</a>
+        </div>
+      </div>
+      
+      <input value="{{{employee}}}" type="hidden" id="emp_status">
+      <form id="form" method="post" enctype="multipart/form-data">
+	      <div class="form-group">
+		      <label for="type">Member type</label>
+		      <select class="form-select" id="type" name="type" required>
+			      <option value=""></option>
+			      <option value="leader">Leader</option>
+			      <option value="employee">Employee</option>
+		      </select>
+		      <br>
+		      <label for="title">First Name</label>
+		      <input type="text" class="form-control" id="title" name="first_name" required>
+		      <br>
+		      <label for="clients">Last Name</label>
+		      <input type="text" class="form-control" id="clients" name="last_name">
+		      <br>
+
+		      <label for="location">Leader Role</label>
+		      <input type="text" class="form-control" id="location" name="role" placeholder="Job Title...">
+		      <br>
+
+		      <label for="description">Leader Description</label>
+		      <textarea class="form-control" id="description" rows="6" name="description"></textarea>
+		      <br>
+
+		      <label for="thumbnail">Main Photo (for "People" page)</label>
+		      <input type="file" class="form-control" id="thumbnail" name="leadership_picture" required>
+		      <br>
+
+		      <label for="extra_imgs">Personal Photo (for Individual Leader page)</label>
+		      <input type="file" class="form-control" id="extra_imgs" name="personal_picture">
+		      <br>
+
+		      <button type="submit" class="btn btn-primary" id="btn">Add Leader</button>
+		      <br>
+		      <br>
+	      </div>
+      </form>
+    </main>
+  </div>
+</div>
+	<script src = "/js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script>
+		let select = document.querySelector("#type");
+		let form = document.querySelector("#form");
+		
+		select.addEventListener("change", (e) => {
+			e.preventDefault();
+
+			if (select.value == 'leader') {
+				form.action = "/panel/people/add/leader";
+			} else if (select.value == 'employee') {
+				form.action = "/panel/people/add/employee";
+			}
+		})
+	</script>
+  </body>
+</html>
+

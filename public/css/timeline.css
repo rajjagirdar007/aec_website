@@ -1,0 +1,145 @@
+.timeline {
+  /* position: relative; */
+  background-image: linear-gradient(to bottom, #17739c, #6d6e72);
+  width: 1px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.point {
+  position: relative;
+  padding-bottom: 50px;
+}
+.year {
+  color: #ffffff;
+  position: absolute;
+  width: 100px;
+  left: -50px;
+  top: 0%;
+  z-index: 1;
+  line-height: 100px;
+  transform: scale(0);
+  letter-spacing: 4.28px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.year:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: #17739c;
+  border-radius: 100%;
+  transform: scale(0);
+  transition: transform .3s cubic-bezier(.17, .67, .3, 1.33);
+}
+.year.is-inview:before {
+  transform: scale(1);
+  transition: transform .3s cubic-bezier(.17, .67, .3, 1.33);
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  left: 0px;
+  top: 0%;
+}
+.timeline .point .bocata {
+  position: relative;
+  background-color: #ffffff;
+  border: solid 1px #17739c;
+  padding: 20px;
+  transition: all 0.3s;
+}
+.title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 4.28px;
+  color: #17739c;
+  text-transform: uppercase;
+}
+.timeline .point .bocata {
+  min-width: 400px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -50px;
+}
+.timeline .point .bocata + .bocata {
+  margin-top: 35px;
+}
+.timeline .point:nth-child(odd) .bocata {
+  left: 70px;
+  position: relative;
+  z-index: 10;
+}
+.timeline .point:nth-child(even) .bocata {
+  right: 470px;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (min-width: 769px) {
+  .timeline {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 769px) and (min-width: 769px) {
+  .timeline .point:nth-child(even) .bocata.little {
+    right: 250px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .timeline .title {
+    font-size: 20px;
+  }
+  .timeline .point .bocata {
+    min-width: 300px;
+    min-height: 150px;
+  }
+  .timeline .point:nth-child(odd) .bocata {
+    left: 100px;
+  }
+  .timeline .point:nth-child(even) .bocata {
+    right: 400px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .timeline .point:nth-child(even) .bocata {
+    left: 100px;
+    position: relative;
+    z-index: 10;
+  }
+  .timeline .point:nth-child(odd) .bocata {
+    left: 100px;
+  }
+  .timeline {
+    margin: 0 0 0 40px;
+  }
+  
+}
+@media only screen and (max-width: 767px) {
+  html.is-ready .c-header_title_line {
+    line-height: 70px;
+  }
+  .c-header_title {
+    bottom: 35%;
+  }
+  .timeline .point:nth-child(odd) .bocata,
+  .timeline .point:nth-child(even) .bocata {
+    left: 70px;
+  }
+  .timeline .point .bocata {
+    top: 0;
+  }
+  .timeline .title {
+    font-size: 15px;
+  }
+  .timeline .point .bocata {
+    min-width: 230px;
+    min-height: 100px;
+  }
+}

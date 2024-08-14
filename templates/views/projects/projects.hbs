@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MP" content="">
+    <title>MP</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+    <link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+    <link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.js"
+        integrity="sha512-HHy6oUGCSBNnEOOG5qtKfLj/ROEAUdbVkznx6Y7x9+qBOvL3PE+oEBSliM5dcOlqMxiuXqca58WbFPXimX11LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios@1.2.1/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-mugen-scroll@0.2.6/dist/vue-mugen-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-countup@0.1.0/dist/vue-count-up.min.js"></script>
+    <style>
+        #subsubfilter {
+            background: #ffffff;
+            color: #084d80;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+
+        .activate {
+            display: none !important;
+            background-color: #e0ecf8 !important;
+            color: #084d80 !important;
+        }
+
+        .activate .this {}
+
+        .activateSub {
+            display: none !important;
+            background-color: #e0ecf8 !important;
+            color: #084d80 !important;
+        }
+
+        .this {
+            float: right !important;
+            position: relative !important;
+            padding-top: 8px;
+            right: .5px !important;
+        }
+
+        .col-6 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: break-spaces;
+        }
+
+        .filter-button {
+            background-color: #9d9d9d !important;
+            color: #ffffff !important;
+        }
+
+        .col-6 {}
+
+        .ddfilterRight {
+
+            display: flex;
+        }
+
+        .projectv4Part:hover {
+            border: 2px #084d80 !important;
+
+            border-color: #084d80 !important;
+        }
+
+        .projectv4Part:hover {
+            background-color: gainsboro;
+
+        }
+
+        .activedrop {
+            background: #084d80 !important;
+            color: #fff;
+            transition: background 0.3s ease;
+            border: solid 1px #000;
+
+
+        }
+
+        .project-loc {
+            font-size: smaller;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .projectv4Part {
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 500px;
+            min-height: 400px;
+        }
+
+        .leftPart {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+	#close-button{
+		background-color: #4ea638 !important;
+		opacity: 65%;
+
+	}
+
+        .leftPart img {
+            object-fit: cover;
+            /* Ensure the image covers the entire container */
+        }
+
+	.nowrap{
+		white-space:nowrap;
+	}
+	.hidden{
+		display: none;
+	}
+
+        /* Add any other styles as needed */
+        @media (max-width: 800px) {
+            .filterMain {
+                display: block;
+            }
+
+            .ddfilterRight {
+                flex-direction: row;
+                justify-content: start;
+            }
+
+            .top-pad {
+                padding-top: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .filterMain {
+                display: block;
+            }
+
+            .ddfilterRight {
+                flex-direction: row;
+                justify-content: start;
+            }
+
+            .top-pad {
+                padding-top: 15px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<button onclick="topFunction()" data-aos="fade-up" id="top" title="Go to top">&uarr;</button>
+<div id="app">
+
+    <body>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header-item-left">
+                        <a href="/" class="brand">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" id="Layer_1" x="0px" y="0px" width="40px" height="40px"
+                                viewBox="254.384 375.649 40 40" enable-background="new 254.384 375.649 40 40"
+                                xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M254.384,375.649v40h40v-40H254.384z M261.734,408.148h-3.621l4.884-24.941l7.427,16.818l-1.823,3.992  l-4.373-9.889L261.734,408.148z M275.791,408.148v-2.901h3.749l-1.774-11.103l-6.385,14.003h-6.036v-2.901h3.782l10.078-22.041  l4.388,24.941H275.791z M290.574,394.204c-0.95,1.356-2.342,2.361-3.933,2.838c-0.917,0.273-3.876,0.769-3.876,0.769l-0.576-3.259  c0.893-0.157,1.795-0.292,2.682-0.481c0.843-0.179,1.693-0.454,2.346-1.037c0.671-0.597,1.142-1.408,1.327-2.287  c0.107-0.518,0.116-1.053,0.025-1.575c-0.095-0.519-0.286-1.021-0.563-1.472c-0.475-0.763-1.196-1.362-2.031-1.694  c-0.815-0.324-1.707-0.291-2.559-0.168c-0.897,0.128-1.791,0.309-2.685,0.469l-0.576-3.257c0-0.002,1.012-0.181,1.076-0.193  c0.938-0.168,1.875-0.361,2.83-0.418c1.659-0.099,3.311,0.368,4.669,1.316c1.646,1.148,2.746,2.865,3.099,4.839l0,0v0.002l0,0  C292.168,390.569,291.725,392.563,290.574,394.204z" />
+                            </svg>
+                        </a>
+                        <a class="brand2" href="/">
+                            <div class="writing">
+
+                                <h6>Engineers <span id="plus">+</span> <span id="type"></span></h6>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="header-item-center">
+
+                        <ul :class="{ 'active' : this.minimenu, 'menu': true}">
+                            <li class="list fade" id="about"><a href="/about">About</a></i></li>
+                            <li class="list fade" id="expertise"><a href="/expertise">Expertise</a></i></li>
+                            <li class="list fade" id="projects"><a href="/projects">Projects</a></i></li>
+                            <li class="list fade" id="leadership"><a href="/leadership">People</a></i></li>
+                            <li class="list fade" id="offices"><a href="/offices">Offices</a></i></li>
+                            <li class="list fade" id="careers"><a href="/career">Careers</a></i></li>
+
+
+
+
+                    </div>
+
+                    <div class="header-item-right">
+                        <button type="button" @click="disFunction()" id="mobileMenu"
+                            :class="{ 'activeMenu' : this.minimenu, 'menu-mobile-trigger': true}">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div class="innerpage">
+            <div class="container">
+                <div class="searchProject">
+                    <div class="filterMain">
+                        <div class="ddfilterLeft">
+                            <h1>
+                                <!--<span class="counter">{%this.aninumber%}</span><span id="plus">+</span>--><span
+                                    class="middle"> Featured Projects</span>
+                            </h1>
+                        </div>
+                        <!--<div class="ddfiltermiddle"></div>-->
+                        <div class="ddfilterRight" class="flex">
+
+                            <div ref="dd" class="flex" v-for="(filters, index) in this.current_filters">
+                                <div class="dropdownFilter" style="margin: 2px 4px 2px 0px">
+                                    <div  :class="{ 'dropdown-button' : true}"
+                                        @click="activate(filters.id, filters.name);" :id="'this' + filters.id">
+                                        <span id="nowrap" ref="change" :class="filters.name">All {%filters.name%}s</span>
+                                        <span class='triangle' v-if="!isActive(filters)">&#9660;</span>
+                                        <span class="triangle" v-else>&#9650;</span>
+
+                                    </div>
+
+                                    <ul id="filterMenu"
+					:class="{ 'active' : isActive1(filters), 'dropdown-selection': true}">
+                                        <li v-for="subfilter in filters.subfilters"
+                                            v-if="checkotherdrill(subfilter.id, filters.id, subfilter, filters.name)">
+                                            <a @click="setSearchAndSub(subfilter.name, filters.name, subfilter.id, subfilter.subfilters, filters.id, subfilter); checkthis(subfilter);"
+                                                :class="{'activate' : isActivate(subfilter.name, subfilter.subfilters)}"
+                                                :id="subfilter.id">{%subfilter.name%} <div class='triangle this'
+                                                    v-if="subfilter.subfilters.length != 0 ">&#9660;</div></a>
+                                            <a v-for="subsubfilter in subfilter.subfilters" v-if="check(subsubfilter)"
+                                                id="subsubfilter"
+                                                @click="setSearch(subsubfilter.name, filters.name, subsubfilter.id); setparent(subsubfilter.id); unactivate();"
+                                                :class="{'activateSub' : isActivate(subsubfilter.name)}">{%subsubfilter.name%}</a>
+                                            <a v-if="check(subfilter.id) && searchValue.length == 0 "
+                                                @click="backfilter()">Back</a>
+                                       
+					</li>
+                                        {{!-- <li><a v-if="searchValue.length != 0 " class="filter-button"
+                                                @click="changeBackAll(current_filters); unactivate();">All
+                                                {%filters.name%}s</a></li>
+					<li> <a v-if="isActiveNow2(filters.name)" class="filter-button"
+                                                @click="unactivateNotClose(filters.id);">Back</a></li>
+					<li><a v-if="isActiveNow(filters.name)" class="filter-button"
+                                                @click="changeBackAll(current_filters); unactivate();">All
+						{%filters.name%}s</a></li> 
+
+					--}}
+				<li v-if="isActiveNow2(filters.name)" @click="unactivateNotClose(filters.id);"><a  class="filter-button"
+									   >Back</a></li> 
+				
+					
+				    	<li v-if="isActiveNow(filters.name)"><a class="filter-button"
+                                                @click="changeBackAll(current_filters); unactivate();">All
+                                                {%filters.name%}s</a></li>
+
+
+
+                                        <li><a class="filter-button" id="close-button" @click="unactivate();">Close</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-pad" ref="rowss">
+                    <div v-for="data in filteredRows" v-bind:class="data.category" class="col-6 mb-5">
+                        <a v-bind:href="'/projects/details/' + data.id " class="projectv4Part">
+                            <div class="leftPart"><img v-bind:src="data.tb" class="projectImg" /></div>
+                            <div class="rightPart">
+
+                                <h2>{%data.name%}</h2>
+                                <h2 class="project-loc">{%data.client%}</h2>
+                                <!--<h2 class="project-loc">{%data.location%} <span class="project-date"> {%data.date%}</span></h2>
+				<h2 class="project-loc"><span class="fify">Completed : </span>{%data.date%}</h2>-->
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--<mugen-scroll :handler="this.loadMore" :should-handle="!loading"></mugen-scroll>-->
+            </div>
+        </div>
+
+    </body>
+</div>
+
+<script src="/js/home_page/header.js"></script>
+<script src="/js/top.js"></script>
+<script>
+
+</script>
+
+
+
+<script>
+    Vue.use(window.VueCountUp);
+
+    //Vue.component(MugenScroll);
+    var vm = new Vue({
+
+        el: '#app',
+        data: {
+            info: {
+                data: {
+                    data: []
+                }
+            },
+            posts: [],
+            active: null,
+            limit: 10,
+            loading: false,
+            real_subfilter: [],
+            real_subsubfilter: [],
+            current_filters: [],
+            parent_filter_id: null,
+            subfilter_parent_id: null,
+            current_id_use: null,
+            current_top_use: null,
+            searchValue: '',
+            hover1: null,
+            hover2: null,
+            sub: null,
+            minimenu: false,
+            activity: true,
+            activesearchvalue: '',
+            screenheight: null,
+            screenwidth: null,
+            total: [],
+            count: {
+                count: []
+            },
+            number1: 0,
+            aninumber: 0,
+            tagsgot: [],
+            filtersactive: null,
+            top_level: '',
+	    active_subfilter: [],
+	    checkers: true	
+
+
+        },
+        methods: {
+            loadMore() {
+                this.loading = true;
+                if (window.location.href.includes('.com')) {
+                    axios.get("https://dev.irzaw.com/projects11").then(response => {
+                        const append = response.data.data.slice(
+                            this.posts.length,
+                            this.posts.length + this.limit
+                        );
+                        this.posts = this.posts.concat(append);
+                        this.busy = false;
+                        this.loading = false;
+                    });
+                } else if (window.location.href.includes('.nyc')) {
+                    axios.get("https://dev.irzaw.com/projects11").then(response => {
+                        const append = response.data.data.slice(
+                            this.posts.length,
+                            this.posts.length + this.limit
+                        );
+                        this.posts = this.posts.concat(append);
+                        this.busy = false;
+                        this.loading = false;
+                    });
+                }
+
+            },
+            handleScroll() {
+                console.log('scrolling!');
+                let scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+                if (scrollPercentage > 0.9 && !this.loading) {
+                    this.loadMore();
+                }
+
+            },
+
+
+            unactivate() {
+		this.active_subfilter = [];
+                this.active = null;
+                this.activesearchvalue = this.searchValue;
+            },
+            unactivateNotClose(id) {
+                console.log(id + 'unactivatenotclose');
+            	this.active = id;
+                this.sub = null;
+		//this.active_subfilter = [];
+
+	    },
+            unactivatesub(sub) {
+                if (sub.subfilters) {
+                    //console.log('hit');
+                } else {
+                    this.active = null;
+                    //console.log(sub.subfilters)
+                    this.activesearchvalue = this.searchValue;
+                }
+            },
+            isActive(filters) {
+                return filters.id === this.active;
+            },
+		subcheck(){
+			return this.sub === null;
+		},
+            isActive1(filters) {
+                if (this.active_subfilter.length > 0 && filters.name == this.top_level){
+		        	return true
+		        } else {
+		            return filters.id === this.active;
+		        }    
+	},
+            isActiveNow(filters_name) {
+                var array = [];
+		    return this.top_level === filters_name && this.searchValue.length > 0;
+                //const foundObject = this.current_filters.find(obj => obj.name === filters_name);
+
+                /*for (i = 0; i< this.current_filters.length; i++){
+                if (this.current_filters[i].name == this.searchValue){
+                    return true;
+    
+                }else {
+                    for
+                }
+                }
+    
+                //console.log(foundObject);
+    
+                    if (this.searchValue == foundObject.name) {
+                        return true;
+                    } else {
+                        for (i = 0; i < foundObject.subfilters.length; i++) {
+                            if (this.searchValue == foundObject.subfilters[i].name) {
+                                return true;
+                            } else {
+                                for (o = 0; o < foundObject.subfilters[i].subfilters.length; o++) {
+                                    if (this.searchValue == foundObject.subfilters[i].subfilters[o].name) {
+                                        return true;
+                                    } else {
+                                        return false;
+                                    }
+                                }
+                            }
+                        }
+                    }*/
+
+
+
+
+            },
+		isActiveNow2(filters_name){
+			  return this.top_level === filters_name && this.searchValue.length > 0 && this.sub !== null;
+		},
+            helper(subfilter, value) {
+                for (obj in subfilter) {
+                    //console.log(obj);
+
+                    if (obj.name == value) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            },
+            setSub(id, filid, sub) {
+
+                if (sub.length != 0) {
+                    if (this.sub === id) {
+                        this.sub = null
+                    } else {
+                        this.sub = id;
+                    }
+                } else {
+                    this.sub = null;
+
+                }
+
+
+                if (this.filtersactive === filid) {
+                    this.filtersactive = null
+                } else {
+                    this.filtersactive = filid
+
+                    //console.log(this.sub);
+                    //console.log(this.filtersactive);
+                }
+
+            },
+            check(id) {
+                return id.parent_id === this.sub;
+
+            },
+            setSearch(search, filter, id) {
+                this.active = null;
+                this.top_level = filter;
+                const elements = document.querySelectorAll('.activedrop');
+                elements.forEach(element => {
+                    element.classList.remove('activedrop');
+                });
+                this.changeBackAll(this.current_filters);
+
+                if (this.searchValue === search) {
+                    this.searchValue = '';
+                    this.activesearchvalue = '';
+                    console.log(this.current_filters);
+                    this.changeBackAll(this.current_filters);
+
+                } else {
+                    this.searchValue = search;
+                    const inner = document.querySelector('.' + filter);
+                    const outer = document.getElementById('this' + id);
+                    var parent = inner.parentNode;
+                    parent.classList.add('activedrop')
+                    inner.innerHTML = search;
+
+                }
+                this.length();
+                console.log(this.searchValue);
+
+            },
+            isActivate(id, subfilters) {
+                return id === this.searchValue;
+		},
+            disFunction() {
+                this.minimenu = !this.minimenu;
+            },
+
+            setSearchAndSub(search, filter, id, sub, filid, obj) {
+                this.active = null;
+                this.top_level = filter;
+
+                const elements = document.querySelectorAll('.activedrop');
+                elements.forEach(element => {
+                    element.classList.remove('activedrop');
+                });
+                this.changeBackAll(this.current_filters);
+
+                if (this.searchValue === search && this.sub != id) {
+                    this.searchValue = '';
+                    this.activesearchvalue = '';
+                    console.log(this.current_filters);
+                    this.changeBackAll(this.current_filters);
+                } else {
+                    this.searchValue = search;
+                    const inner = document.querySelector('.' + filter);
+                    const outer = document.getElementById('this' + id);
+                    var parent = inner.parentNode;
+                    parent.classList.add('activedrop');
+                    inner.innerHTML = search;
+                }
+
+                this.length();
+                console.log(this.searchValue);
+
+                if (sub.length != 0) {
+                    if (this.sub === id) {
+                        //this.sub = null;
+                    } else {
+                        this.sub = id;
+                    }
+                } else {
+                    //this.sub = null;
+                }
+
+                if (this.filtersactive === filid) {
+                    this.filtersactive = null;
+                } else {
+                    this.filtersactive = filid;
+                }
+                //@click="setSearch(subfilter.name, filters.name, subfilter.id); unactivatesub(subfilter); checkactivate(subfilter, filters.name); setSub(subfilter.id, filters.id, subfilter.subfilters);"
+                console.log(this.sub);
+                console.log(this.filtersactive);
+            },
+
+            checkthis(sub) {
+                
+                if (sub.subfilters.length == 0) {
+                    this.unactivate;
+                } else {
+                    this.active_subfilter = sub.subfilters;
+                }
+
+            },
+
+            changeBackAll(name) {
+                //console.log(name);
+                const results = name.filter(names => names.level == 1);
+                //console.log(results);
+
+                for (let i = 0; i < results.length; i++) {
+                    const inner = document.querySelector('.' + results[i].name);
+                    //console.log(inner);
+                    if (inner.innerHTML != 'All ' + results[i].name + 's') {
+                        inner.innerHTML = 'All ' + results[i].name + 's';
+                    }
+                    this.searchValue = '';
+                    this.activesearchvalue = '';
+
+                }
+                const elements = document.querySelectorAll('.activedrop');
+                elements.forEach(element => {
+                    element.classList.remove('activedrop');
+                });
+                this.length();
+                this.sub = null;
+                this.number1 = this.number1;
+                this.aninumber = 0;
+                //this.sub = null;
+                this.filtersactive = null;
+            },
+            changeBacksome(name) {
+                //console.log(name.name);
+                const inner = document.querySelector('.' + name.name);
+                //console.log(inner);
+                if (inner.innerHTML != 'All ' + name.name + 's') {
+                    inner.innerHTML = 'All ' + name.name + 's';
+                }
+                this.searchValue = '';
+                this.activesearchvalue = '';
+                const elements = document.querySelectorAll('.activedrop');
+                elements.forEach(element => {
+                    element.classList.remove('activedrop');
+                });
+                this.length();
+                this.sub = null;
+                this.number1 = this.number1;
+                this.aninumber = 0;
+            },
+
+            setparent(id) {
+                const outer = document.getElementById(id);
+                //console.log(outer);
+            },
+            onResize() {
+                this.screenwidth = window.innerWidth;
+                this.screenheight = window.innerHeight;
+                //console.log(this.screenwidth);
+                //console.log(this.screenheight);
+                //console.log(this.screenwidth < 1000);
+            },
+            isMobile() {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    return true
+                } else {
+                    return false
+                }
+            },
+            length() {
+                //    var total = this.total.filter(c => {
+                //      const cat = c.category.toString().toLowerCase().split(' ').join('');
+
+                //    return cat.includes(this.searchValue.toLowerCase().split(' ').join(''));
+
+
+
+                //});
+                //const len = total.length;
+                //this.count.count = len;
+                //this.number1 = len;
+                //return parseInt(len / 10, 10) * 10;
+                //return total.length;
+                console.log(' ');
+            },
+            checkactivate(sub) {
+                if (sub.id == this.sub) {
+                    this.unactivate();
+
+                } else if (sub.subfilters.length == 0) {
+                    this.unactivate();
+
+                } else if (sub.subfilters.length != 0) {
+
+                    this.searchValue = '';
+                    this.changeBackAll(this.current_filters);
+
+
+                }
+
+
+
+            },
+            activate(id, name) {
+                if (this.active === id) {
+                    this.active = null
+                } else {
+                    this.active = id
+                }
+                //this.top_level = name;
+            
+		    //console.log(this.active);
+                //this.activity = true;
+
+            },
+            change() {
+                //  var www = document.querySelector('.Sector');
+                //    var first = www.firstElementChild;
+                //console.log(document.querySelector('.Sector'));
+                //console.log(this.$refs.name);
+                const urlParams = new URLSearchParams(window.location.search);
+                const filter = urlParams.get('filter');
+                const id = urlParams.get('id');
+                if (filter) {
+                    this.setSearch(filter, "Sector", id);
+                    this.setparent(id);
+                    this.unactivate();
+                }
+
+                //console.log(www);
+                //console.log(www.firstElementChild);
+            },
+            checkotherdrill(sub, fil, filters, filter_name) {
+                console.log(filters.id);
+                console.log(this.sub)
+                //if (this.searchValue.length == 0) { 
+                //if (this.filtersactive == fil) {
+                // if (this.sub != null){
+                //       return this.sub == sub;
+                // } else {
+                //     return true;
+                //   }
+
+                // } else {
+                //     return true;
+                //   }
+                // } else {
+
+                // if (this.filtersactive == fil) {
+                //    if (this.sub != null){
+                //             return this.sub == sub;
+                //       } else {
+                //          return true;
+                //        }
+
+                //      } else {
+                //     return true;
+                //   }
+
+                // }
+
+
+
+                //if (this.filtersactive == fil){
+
+			if (this.top_level == filter_name){
+		        if (this.sub != null) {
+				        return this.sub == sub;
+				} else {
+				    return true;
+				}
+			}else {
+				return true;
+			}
+
+                //}
+                //else{
+                //	return true;
+                //}
+            },
+            backfilter() {
+                this.sub = null;
+            },
+            add(id) {
+                this.filtersactive = id;
+
+
+            },
+    globalClickHandler(event) {
+      const dropdownElement = this.$refs.dd;
+
+      //const isClickInside = dropdownElement[0] && dropdownElement[0].contains(event.target);
+      //const isClickInside1 = dropdownElement[1] && dropdownElement[1].contains(event.target);
+
+
+      //if (!isClickInside && !isClickInside1) {
+        //this.unactivate();
+      //}
+    },
+            searchValuefunc(subfilters, value) {
+                for (let i = 0; i < subfilters.length; i++) {
+                    const filter = subfilters[i];
+                    if (filter.name === value) {
+                        return true; // Value found
+                    }
+
+                    if (filter.subfilters && filter.subfilters.length > 0) {
+                        const found = searchValue(filter.subfilters, value);
+                        if (found) {
+                            return true; // Value found in nested subfilters
+                        }
+                    }
+                }
+
+                return false; // Value not found
+            },
+
+            showAll(filters) {
+
+            }
+        },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.onResize);
+            window.removeEventListener('scroll', this.handleScroll);
+            document.removeEventListener('click', this.globalClickHandler);
+
+        },
+        computed: {
+            filteredRows() {
+                return this.posts.filter(c => {
+                    const cat = c.category.toString().toLowerCase().replace(/\s/g, '');;
+
+                    return cat.includes(this.searchValue.toString().toLowerCase().replace(/\s/g, ''));
+
+
+
+                });
+            },
+            //filteredRows1() {
+            //  return this.total.filter(c => {
+            //    const cat = c.category.toString().toLowerCase().split(' ').join('');
+
+            //  const value = cat.includes(this.searchValue.toLowerCase().split(' ').join(''))
+            //return value;
+
+            // });
+            //},
+            isActivate(id) {
+                return id === this.searchValue;
+            },
+
+            countProgress() {
+                const val = parseInt(this.number1 / 10, 10) * 10;
+                const val2 = Math.ceil(val / 10) * 10;
+                return Math.min(this.aninumber / val2, 1);
+
+            }
+        },
+
+        created() {
+            this.screenwidth = window.innerWidth;
+            this.screenheight = window.innerHeight;
+            if (window.location.href.includes('.com')) {
+                axios
+                    .get('https://dev.irzaw.com/data')
+                    .then(response => (this.info = response))
+            } else if (window.location.href.includes('.nyc')) {
+                axios
+                    .get('https://dev.irzaw.com/data')
+                    .then(response => (
+                        this.info = response
+                    ))
+            }
+            axios
+                .get('https://dev.irzaw.com/get_allTagsfront')
+                .then(response => (this.current_filters = response.data))
+            axios
+                .get('https://dev.irzaw.com/gettags')
+                .then(response => (this.tagsgot = response.data))
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('filter');
+            if (filter) {
+                this.searchValue = filter;
+            }
+
+            axios
+                .get('https://dev.irzaw.com/getProjects_count')
+                .then(response => (this.count = response.data.data))
+
+            //console.log(this.count);
+            //console.log(this.searchValue);
+            var currentUrl = window.location.pathname;
+            //console.log(currentUrl);
+            var url = 'projects';
+            var ele = document.getElementById(url);
+            ele.id = 'hover';
+            this.total = this.info.data;
+            //console.log(this.info.data);
+
+        },
+        delimiters: ['{%', '%}'],
+        watch: {
+            count: function (val) {
+                //console.log(val);
+                this.aninumber = 0;
+                this.number1 = parseInt(this.count.count / 10, 10) * 10;
+
+            },
+		sub: function(val){
+			if (val === null){
+				this.checkers = true;
+			} else {
+				this.checkers = false;
+			}
+
+		},
+            countProgress: function (val) {
+                //console.log(val);
+                if (val < 1 || val > 1) {
+                    setTimeout(() => {
+                        this.aninumber++;
+                        //console.log(this.aninumber);
+                    }, 20);
+                    //console.log(this.aninumber == this.number1);
+                } else {
+                    this.aninumber = this.aninumber;
+
+                }
+
+            },
+            number1: function (val) {
+                //console.log('change');
+                this.aninumber = 0;
+                this.number1 = parseInt(this.count.count / 10, 10) * 10;
+                //console.log(this.aninumber);
+                //console.log(this.number1)
+            }
+        },
+        mounted() {
+            window.addEventListener('scroll', this.handleScroll);
+            this.$nextTick(() => {
+                window.addEventListener('resize', this.onResize);
+            });
+            document.addEventListener('click', this.globalClickHandler);
+
+
+            this.loadMore();
+            setTimeout(() => {
+                this.change();
+                //console.log(document.querySelector('.Sector'));
+                //console.log(this.info.data);
+                //console.log(this.count);
+                this.total = this.info.data;
+            }, 300);
+            this.total = this.info.data;
+
+        },
+        components: { /*MugenScroll,*/ VueCountUp }
+
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#type', {
+        strings: ['Architects', 'Inspectors'],
+        typeSpeed: 170,
+        backSpeed: 100,
+        smartBackspace: true,
+        loop: true,
+        loopCount: Infinity,
+        showCursor: false,
+        cursorChar: '|',
+        autoInsertCss: true
+    });
+</script>
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">
+    const { counterUp } = window.counterUp
+
+    const el = document.querySelector('.counter');
+    //console.log(el);
+    counterUp(el, {
+        duration: 5000,
+        delay: 16,
+    })
+</script>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="theme-color" content="#084d80" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="MP" content="">
+        <title>MP</title>
+        <link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+        <link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+        <link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+        <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <link rel="stylesheet" type="text/css" href="/css/modal.css">
+        <link rel="stylesheet" type="text/css" href="/css/splide.min.css">
+                <!-- Primary Meta Tags -->
+<title>MP Engineers and Architects</title>
+<meta name="title" content="MP Engineers and Architects">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mpengs.nyc/">
+<meta property="og:title" content="MP Engineers and Architects">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mpengs.nyc/">
+<meta property="twitter:title" content="MP Engineers and Architects">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="/images/logo.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.js"
+        integrity="sha512-HHy6oUGCSBNnEOOG5qtKfLj/ROEAUdbVkznx6Y7x9+qBOvL3PE+oEBSliM5dcOlqMxiuXqca58WbFPXimX11LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios@1.2.1/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+	<body class="slideOne">
+	{{> new_header}}
+<!-- Section: Main -->
+<div id="app">
+	<div class="expertiseDetailsPage">
+		<div class="expertiseDetailsPageAbs">
+		<div class="container">
+			<div class="expertiseDetailsRow">
+				<div class="expertiseDetailsContent">
+					<h1>{%this.expertise_data.type%}</h1>
+					<p>{%this.expertise_data.description%}</p>
+				</div>
+				<div class="expertiseDetailsSlider">
+					<!--<div class="splide" id="splide">
+						<div class="splide__arrows">
+							<button class="splide__arrow splide__arrow--prev blackArrow">
+								<svg xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="29.412px" viewBox="272.64 331.83 50 29.412" enable-background="new 272.64 331.83 50 29.412" xml:space="preserve">
+									<g transform="translate(0,-952.36218)">
+										<path fill="#FFFFFF" d="M322.64,1298.893c-0.021-0.526-0.237-1.133-0.598-1.517l-11.765-12.5c-0.797-0.716-2.326-1.012-3.217-0.184   c-0.878,0.816-0.852,2.398,0.022,3.217l8.272,8.778h-40.51c-1.218,0-2.206,0.988-2.206,2.206s0.988,2.206,2.206,2.206h40.51   l-8.272,8.778c-0.752,0.754-0.892,2.392-0.022,3.217c0.869,0.825,2.452,0.562,3.217-0.184l11.765-12.5   C322.445,1299.982,322.641,1299.48,322.64,1298.893L322.64,1298.893z"/>
+									</g>
+								</svg>
+							</button>
+							<button class="splide__arrow splide__arrow--next blackArrow">
+								<svg xmlns:cc="http://creativecommons.org/ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="29.412px" viewBox="272.64 331.83 50 29.412" enable-background="new 272.64 331.83 50 29.412" xml:space="preserve">
+									<g transform="translate(0,-952.36218)">
+										<path fill="#FFFFFF" d="M322.64,1298.893c-0.021-0.526-0.237-1.133-0.598-1.517l-11.765-12.5c-0.797-0.716-2.326-1.012-3.217-0.184   c-0.878,0.816-0.852,2.398,0.022,3.217l8.272,8.778h-40.51c-1.218,0-2.206,0.988-2.206,2.206s0.988,2.206,2.206,2.206h40.51   l-8.272,8.778c-0.752,0.754-0.892,2.392-0.022,3.217c0.869,0.825,2.452,0.562,3.217-0.184l11.765-12.5   C322.445,1299.982,322.641,1299.48,322.64,1298.893L322.64,1298.893z"/>
+									</g>
+								</svg>
+							</button>
+						</div>
+						
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide" v-for="item in this.projects">
+									<a :href=" '/projects?filter=' + item.name + '&id=' + item.id">
+										<div class="expSliderDetails">
+											<h3>{%item.name%}</h3>
+											<p></p>
+										</div>
+										<img :src="'https://irzaw.com/images_api/images/expertise/tags/' + item.images" class="img-fluid" />
+									</a>
+								</li>
+
+							</ul>
+			</div>
+					</div>-->
+	                                  <div class="table">
+                                                        <a :href="'/projects?filter=' + item.name + '&id=' + item.id" id="expertise_tile" class="projectv4Part" v-for="item in this.projects">
+
+                                                                <div class="leftPart">
+                                                                        <img class="image" :src="'https://irzaw.com/images_api/images/expertise/tags/' + item.images">
+                                                                </div>
+                                                                <div class="rightPart">
+                                                                        <h2>{%item.name%}</h2>
+
+                                                                </div>
+                                                        </a>
+
+                                                </div>
+				</div>	
+			</div>					
+		</div>
+		</div>		
+		<div id="particle-canvas-Expertise"></div>
+
+	</div>
+
+</div>
+
+</body>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				message: "Hello World!",
+				showModal: false,
+				expertise_data: {
+					id: null,
+					type: null,
+					description: null,
+					image: null,
+					headline: null
+
+				},
+				projects: [],
+				tags: [],
+				hostname: 'https://irzaw.com'
+			
+			},
+			mounted() {
+			   console.log(this.expertise_data)
+			   console.log(this.tags)	
+			  },
+			  methods: {
+			    closeModal() {
+			      this.showModal = false;
+			    },
+			
+			  },
+			created() {
+		        let self = this;
+			   const urlParams = new URLSearchParams(window.location.search);
+			   const expertise = urlParams.get('expertise');
+			   const tag_id = urlParams.get('tag_id');    
+				                axios
+                				        .get(this.hostname + '/expertise_details/' + expertise)
+							    .then(function (response) {
+								console.log(response);
+								self.expertise_data.id = response.data[0].id;
+								self.expertise_data.type = response.data[0].type;
+								self.expertise_data.description = response.data[0].description;
+								self.expertise_data.image = response.data[0].image;
+								self.expertise_data.headline = response.data[0].headline;
+
+						       
+							    });
+
+						axios 
+						  .get(this.hostname + '/expertise_tags/' + tag_id)
+						  .then(function (response1) {
+						    self.$set(self, 'tags', response1.data);
+							console.log(response1.data);
+							  self.projects = response1.data;
+							  console.log(self.projects)
+						 });
+			},
+			delimiters: ['{%', '%}'],
+
+		})
+
+
+
+</script>
+
+<script src="/js/canvasExpertise.js"></script>
+<!--<script src="/js/scrollAnimation.js"></script>
+<script src="/js/canvasAddNew.js"></script>
+<script src="/js/canvasNew.js"></script>
+<script src="/js/canvasMission.js"></script>
+-->
+<!-- New Slider start 
+<script src="/js/splide.min.js"></script>
+<script>
+var splide = 	new Splide( '#splide', {
+	type   : 'loop',
+	perPage: 4,
+	perMove: 1,
+	pagination  : false,
+	gap: 10,
+	breakpoints: {
+		576: {
+			perPage: 1,
+		},
+		992: {
+			perPage: 2,
+		},
+		1024: {
+			perPage: 3,
+		},
+	},
+} );
+splide.mount();
+
+</script>-->
+<!-- New Slider end -->
+<script src="/js/canvasExpertise.js"></script>
+<!-- New Slider end -->
+</html>

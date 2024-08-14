@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="theme-color" content="#084d80" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="MP" content="">
+        <title>MP</title>
+        <link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+        <link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+        <link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+        <link rel="stylesheet" type="text/css" href="/css/media.css">
+        <link rel="stylesheet" type="text/css" href="/css/modal.css">
+        <link rel="stylesheet" type="text/css" href="/css/splide.min.css">
+        <style>
+    .expertiseDetailsPage {
+        display: flex;
+    }
+
+.expertiseDetailsPageRow{
+    align-items: flex-start !important;
+}
+    .expertiseDetailsContent {
+        width: 35%;
+        background-color: white;
+        padding: 10px 30px 10px 30px;
+        box-sizing: border-box;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1;
+            position: -webkit-sticky;
+    position: sticky;
+    top: 62px
+    }
+
+    .expertiseDetailsSlider {
+        flex: 1;
+        padding-top: 2vh;
+        overflow-y: auto;
+    }
+
+    .table {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .projectv4Part {
+        flex: 1 0 calc(33.333% - 20px);
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectv4Part:hover {
+        transform: scale(1.05);
+    }
+
+    .leftPart {
+        flex: 80%;
+        overflow: hidden;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .rightPart {
+        flex: 20%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #expertise_tile {
+        min-width: 300px;
+        min-height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        .expertiseDetailsPage {
+            flex-direction: column;
+        }
+
+        .expertiseDetailsContent,
+        .expertiseDetailsSlider {
+            flex: 1;
+            width: 100%;
+            max-width: none;
+        }
+
+        .projectv4Part {
+            flex: 1 0 100%;
+        }
+    }
+        </style>
+                <!-- Primary Meta Tags -->
+<title>MP Engineers and Architects</title>
+<meta name="title" content="MP Engineers and Architects">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mpengs.nyc/">
+<meta property="og:title" content="MP Engineers and Architects">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mpengs.nyc/">
+<meta property="twitter:title" content="MP Engineers and Architects">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="/images/logo.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.js"
+        integrity="sha512-HHy6oUGCSBNnEOOG5qtKfLj/ROEAUdbVkznx6Y7x9+qBOvL3PE+oEBSliM5dcOlqMxiuXqca58WbFPXimX11LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/axios@1.2.1/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+	<body class="slideOne">
+	{{> new_header}}
+<!-- Section: Main -->
+<div id="app">
+	<div class="expertiseDetailsPage">
+		<div class="expertiseDetailsPageAbs">
+		<div class="container">
+			<div class="expertiseDetailsRow">
+				<div class="expertiseDetailsContent">
+					<h1>{%this.expertise_data.type%}</h1>
+					<p>{%this.expertise_data.description%}</p>
+				</div>
+				<div class="expertiseDetailsSlider">
+
+	                                  <div class="table">
+                                                        <a :href="'/projects?filter=' + item.name + '&id=' + item.id" id="expertise_tile" class="projectv4Part" v-for="item in this.projects">
+
+                                                                <div class="leftPart">
+                                                                        <img class="image" :src="'https://irzaw.com/images_api/images/expertise/tags/' + item.images">
+                                                                </div>
+                                                                <div class="rightPart">
+                                                                        <h2>{%item.name%}</h2>
+
+                                                                </div>
+                                                        </a>
+
+                                                </div>
+				</div>	
+			</div>					
+		</div>
+		</div>		
+		<div id="particle-canvas-Expertise"></div>
+
+	</div>
+
+</div>
+
+</body>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				message: "Hello World!",
+				showModal: false,
+				expertise_data: {
+					id: null,
+					type: null,
+					description: null,
+					image: null,
+					headline: null
+
+				},
+				projects: [],
+				tags: [],
+				hostname: 'https://irzaw.com'
+			
+			},
+			mounted() {
+			   console.log(this.expertise_data)
+			   console.log(this.tags)	
+			  },
+			  methods: {
+			    closeModal() {
+			      this.showModal = false;
+			    },
+			
+			  },
+			created() {
+		        let self = this;
+			   const urlParams = new URLSearchParams(window.location.search);
+			   const expertise = urlParams.get('expertise');
+			   const tag_id = urlParams.get('tag_id');    
+				                axios
+                				        .get(this.hostname + '/expertise_details/' + expertise)
+							    .then(function (response) {
+								console.log(response);
+								self.expertise_data.id = response.data[0].id;
+								self.expertise_data.type = response.data[0].type;
+								self.expertise_data.description = response.data[0].description;
+								self.expertise_data.image = response.data[0].image;
+								self.expertise_data.headline = response.data[0].headline;
+
+						       
+							    });
+
+						axios 
+						  .get(this.hostname + '/expertise_tags/' + tag_id)
+						  .then(function (response1) {
+						    self.$set(self, 'tags', response1.data);
+							console.log(response1.data);
+							  self.projects = response1.data;
+							  console.log(self.projects)
+						 });
+			},
+			delimiters: ['{%', '%}'],
+
+		})
+
+
+
+</script>
+
+<script src="/js/canvasExpertise.js"></script>
+<!--<script src="/js/scrollAnimation.js"></script>
+<script src="/js/canvasAddNew.js"></script>
+<script src="/js/canvasNew.js"></script>
+<script src="/js/canvasMission.js"></script>
+-->
+<!-- New Slider start 
+<script src="/js/splide.min.js"></script>
+<script>
+var splide = 	new Splide( '#splide', {
+	type   : 'loop',
+	perPage: 4,
+	perMove: 1,
+	pagination  : false,
+	gap: 10,
+	breakpoints: {
+		576: {
+			perPage: 1,
+		},
+		992: {
+			perPage: 2,
+		},
+		1024: {
+			perPage: 3,
+		},
+	},
+} );
+splide.mount();
+
+</script>-->
+<!-- New Slider end -->
+<script src="/js/canvasExpertise.js"></script>
+<!-- New Slider end -->
+</html>

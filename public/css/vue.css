@@ -1,0 +1,485 @@
+body {
+  overflow-x: scroll;
+}
+.sidebar{
+font-size: 14px;
+}
+
+.navbar-dark .navbar-brand{
+  padding: 12px 16px;
+  font-size: 16px;
+}
+table{
+  font-size: 14px;
+}
+
+
+
+
+/* .tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+  text-align: center;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid; 
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+table{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+}
+ */
+#search {
+  margin: 0 auto;
+  display: block;
+}
+img {
+  top: 0;
+  width: 860px;
+  position:fixed;
+}
+input {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+.NYC-1 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 9px;
+  bottom: 0;
+  left: 538px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-2 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 66px;
+  bottom: 0;
+  left: 538px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-3 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 124px;
+  bottom: 0;
+  left: 538px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-4 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 181px;
+  bottom: 0;
+  left: 538px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-5 {
+  position: absolute;
+  height: 59px;
+  width: 59px;
+  top: 9px;
+  bottom: 0;
+  left: 479px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-6 {
+  position: absolute;
+  height: 59px;
+  width: 59px;
+  top: 66px;
+  bottom: 0;
+  left: 479px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-7 {
+  position: absolute;
+  height: 59px;
+  width: 59px;
+  top: 124px;
+  bottom: 0;
+  left: 479px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-8 {
+  position: absolute;
+  height: 55px;
+  width: 59px;
+  top: 181px;
+  bottom: 0;
+  left: 479px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-9 {
+  position: absolute;
+  height: 59px;
+  width: 59px;
+  top: 9px;
+  bottom: 0;
+  left: 355px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-10 {
+  position: absolute;
+  height: 59px;
+  width: 59px;
+  top: 66px;
+  bottom: 0;
+  left: 355px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-11 {
+  position: absolute;
+  height: 57px;
+  width: 59px;
+  top: 177px;
+  bottom: 0;
+  left: 355px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-12 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 9px;
+  bottom: 0;
+  left: 297px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-13 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 66px;
+  bottom: 0;
+  left: 297px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-14 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 120px;
+  bottom: 0;
+  left: 297px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-15 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 177px;
+  bottom: 0;
+  left: 297px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-16 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 9px;
+  bottom: 0;
+  left: 174px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-17 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 66px;
+  bottom: 0;
+  left: 174px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-18 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 120px;
+  bottom: 0;
+  left: 174px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-19 {
+  position: absolute;
+  height: 57px;
+  width: 58px;
+  top: 177px;
+  bottom: 0;
+  left: 174px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-21 {
+  position: absolute;
+  height: 75px;
+  width: 58px;
+  top: 22px;
+  bottom: 0;
+  left: 8px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-22 {
+  position: absolute;
+  height: 76px;
+  width: 59px;
+  top: 386px;
+  bottom: 0;
+  left: 94px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-23 {
+  position: absolute;
+  height: 76px;
+  width: 59px;
+  top: 385px;
+  bottom: 0;
+  left: 180px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.NYC-24 {
+  position: absolute;
+  height: 70px;
+  width: 89px;
+  top: 365px;
+  bottom: 0;
+  left: 281px;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff; z-index: 99;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+
+.NYC-25 {
+    position: absolute;
+    height: 65px;
+    width: 99px;
+    top: 363px;
+    bottom: 0;
+    left: 555px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+
+
+.NYC-26 {
+    position: absolute;
+    height: 74px;
+    width: 73px;
+    top: 278px;
+    bottom: 0;
+    left: 778px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-27 {
+    position: absolute;
+    height: 75px;
+    width: 74px;
+    top: 425px;
+    bottom: 0;
+    left: 778px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-O1 {
+    position: absolute;
+    height: 71px;
+    width: 66px;
+    top: 494px;
+    bottom: 0;
+    left: 587px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-O2 {
+    position: absolute;
+    height: 65px;
+    width: 71px;
+    top: 468px;
+    bottom: 0;
+    left: 390px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-C5 {
+    position: absolute;
+    height: 58px;
+    width: 44px;
+    top: 613px;
+    bottom: 0;
+    left: 493px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-C2 {
+    position: absolute;
+    height: 75px;
+    width: 74px;
+    top: 425px;
+    bottom: 0;
+    left: 778px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-C3 {
+    position: absolute;
+    height: 75px;
+    width: 74px;
+    top: 425px;
+    bottom: 0;
+    left: 778px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .NYC-C4 {
+    position: absolute;
+    height: 75px;
+    width: 74px;
+    top: 425px;
+    bottom: 0;
+    left: 778px;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff; z-index: 99;
+    text-align: center;
+    transition: opacity 0.2s, visibility 0.2s;
+  }

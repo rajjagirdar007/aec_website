@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{"0447":function(t,o,n){"use strict";n("668f")},"668f":function(t,o,n){},f820:function(t,o,n){"use strict";n.r(o);var a=function(){var t=this,o=t._self._c;return o("div",[o("Flipbook",{staticClass:"flipbook",attrs:{pages:t.pages}})],1)},s=[],p=n("8330"),e={name:"About",components:{Flipbook:p["a"]},data(){return{pages:["/yo.jpg","/na.jpg","/jo.jpg","/ma.jpg"]}}},i=e,u=(n("0447"),n("2877")),c=Object(u["a"])(i,a,s,!1,null,"36611fe8",null);o["default"]=c.exports}}]);
+//# sourceMappingURL=about.b6950548.js.map

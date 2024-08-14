@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="MP" content="">
+	<title>MP</title>
+	<link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+	<link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+	<!-- Project page start -->
+	<link rel="stylesheet" href="/css/vanillaSelectBox.css">
+	<link rel="stylesheet" type="text/css" href="/css/gallery.css">
+	<!-- Project page end -->
+	<link rel="stylesheet" type="text/css" href="/css/media.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{{> meta}}
+</head>
+
+<body class="slideOne">
+		{{>new_header}}
+
+<!-- Section: Main -->
+
+<div class="innerpage">
+	<div class="container">
+		<div class="projectDetailsMain">
+			<div class="projectDetailsHeading">
+				<h2> {{data.name}} </h2>
+				<h3> {{data.location}}</h3>
+			</div>
+			<div class="projectDetailsContent">
+				<div class="row">
+					<div class="projectDetailsLeft">
+						<div class="part">
+							<h4>{{data.date}}</h4>
+						</div>
+						<div class="part">
+							<h4>Project Partners</h4>
+							<p style="white-space: pre-wrap;">{{data.partners}}</p>
+						</div>
+						<div class="part">
+							<h4>Description</h4>
+							<input type="hidden" value="{{{data.description}}}" id="desc">
+							<p id="desc_field" class="mb-2" style="white-space: pre-wrap;">
+								{{data.description}}
+							</p>
+						</div>
+					</div>
+					<div class="projectDetailsRight">
+						{{#each img}}
+						<div class="projectDetailsItems"><img src="{{{this}}}"></div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+</body>
+
+<script>
+	const desc = document.getElementById("desc");
+	document.getElementById("desc_field").textContent = desc.value;
+</script>
+</html>

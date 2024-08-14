@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="MP" content="">
+<title>MP</title>
+    <link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+	<link rel="stylesheet" type="text/css" href="./css/home_page/styletest.css">
+	<link rel="stylesheet" type="text/css" href="./css/home_page/ionicon.min.css">
+<link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+<link rel="stylesheet" type="text/css" href="/css/media.css">
+	<!-- Primary Meta Tags -->
+	<title>MP Engineers and Architects</title>
+	<meta name="title" content="MP Engineers and Architects">
+	<meta name="description" content="">
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.mpengs.nyc/">
+	<meta property="og:title" content="MP Engineers and Architects">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/images/logo.png">
+	
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.mpengs.nyc/">
+	<meta property="twitter:title" content="MP Engineers and Architects">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:image" content="/images/logo.png">
+
+<style>
+.image-slider {
+	height: 300px;
+}
+	@media only screen and (max-width: 400px) {
+		.image-slider {
+			height: 250px !important;
+		}
+	}
+</style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+	{{> new_header}}
+
+<!-- Section: Main -->
+<section class="aboutPartSlide box1" id="box1">
+		<div class="aboutPartSlideDetails">
+			<div class="container">
+				<div class="row aboutPartSlideDetailsAlign" style="/*padding-top: 50px;*/">
+					<div class="col-md-12 col-6 image-slider" style="height: 300px; width: 50%;" >
+						<div class="splide splideAbout">
+							<div class="splide__track splideTrackSlider">
+								<ul class="splide__list">
+								  	{{#each images}}
+									<li class="splide__slide">
+										<img src="{{{this}}}" class="img-fluid" />
+									</li>
+									{{/each}}
+									<!--<li class="splide__slide">
+										<img src="/images/about_us/about-2.jpg" class="img-fluid" />
+									</li>
+									<li class="splide__slide">
+										<img src="/images/about_us/about-3.jpg" class="img-fluid" />
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+{{#each data}}
+					<div class="col-md-12 col-6">
+						<div class="aboutPartSlideText">
+							<h3>Who We Are</h3>
+							<p>{{this.who1}}</p>
+							<p>{{this.who2}}</p>
+							<p>{{this.who3}}</p>
+						</div>
+						<div class="aboutPartSlideText">
+							<h3>What We Do</h3>
+							<p>{{this.what}}</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id="particle-canvas-new"></div>
+		<a href="#box2" class="arrowDown">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="17.651px" viewBox="292.572 372.626 20 17.651" enable-background="new 292.572 372.626 20 17.651" xml:space="preserve">
+				<path fill="#FFFFFF" d="M311.802,372.626c0.425,0,0.77,0.344,0.77,0.769c0,0.189-0.069,0.363-0.184,0.498l-9.157,16.025  c-0.272,0.479-1.061,0.479-1.334,0l-9.224-16.142c-0.135-0.238-0.135-0.53,0.003-0.767c0.136-0.237,0.39-0.383,0.664-0.383h18.447  H311.802"/>
+			</svg>
+		</a>
+	</section>
+
+	<section class="aboutPartOne box2" id="box2">
+		<div class="aboutPartOneDetails">
+			<div class="container">
+				<div class="title">
+					<div class="title-inner">
+						<div class="titleone">
+							<div class="titleone-inner  js-scroll"><span class="bold">Our Vision</span> {{this.vision1}}</div>
+						</div>
+						<div class="titletwo">
+							<div class="titletwo-inner js-scroll">{{this.vision2}}</div>
+						</div>
+						<div class="titlethree">
+							<div class="titlethree-inner js-scroll">{{this.vision3}} </div>
+						</div>
+						<div class="titlefour">
+							<div class="titlefour-inner js-scroll">{{this.vision4}}</div>
+						</div>
+						<div class="titlefive">
+							<div class="titlefive-inner js-scroll"><span class="myMove">{{this.vision5}}</span></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div id="particle-canvas"></div>
+		<a href="#box3" class="arrowDown">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="17.651px" viewBox="292.572 372.626 20 17.651" enable-background="new 292.572 372.626 20 17.651" xml:space="preserve">
+				<path fill="#FFFFFF" d="M311.802,372.626c0.425,0,0.77,0.344,0.77,0.769c0,0.189-0.069,0.363-0.184,0.498l-9.157,16.025  c-0.272,0.479-1.061,0.479-1.334,0l-9.224-16.142c-0.135-0.238-0.135-0.53,0.003-0.767c0.136-0.237,0.39-0.383,0.664-0.383h18.447  H311.802"/>
+			</svg>
+		</a>
+	</section>
+
+	<section class="aboutPartTwo box3" id="box3">
+		<div class="aboutPartTwoDetails">
+			<div class="container">
+				<div class="gradientBG">
+					<div class="w-100 js-scroll heading">Our Values :</div>
+					<div class="w-100 js-scroll heading">{{this.values1}}</div>
+					<div class="w-100 js-scroll heading">{{this.values2}}</div>
+					<div class="w-100 js-scroll heading">{{this.values3}}</div>
+					<div class="w-100 js-scroll heading">{{this.values4}}</div>
+				</div>					
+			</div>		
+		</div>
+		<a href="#box4" class="arrowDown">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="17.651px" viewBox="292.572 372.626 20 17.651" enable-background="new 292.572 372.626 20 17.651" xml:space="preserve">
+				<path fill="#FFFFFF" d="M311.802,372.626c0.425,0,0.77,0.344,0.77,0.769c0,0.189-0.069,0.363-0.184,0.498l-9.157,16.025  c-0.272,0.479-1.061,0.479-1.334,0l-9.224-16.142c-0.135-0.238-0.135-0.53,0.003-0.767c0.136-0.237,0.39-0.383,0.664-0.383h18.447  H311.802"/>
+			</svg>
+		</a>
+		<div id="particle-canvas-value"></div>
+	</section>
+
+	<section class="aboutPartOne box4" id="box4">
+		<div class="aboutPartOneDetails">
+			<div class="container">
+				<div class="title">
+					<div class="title-inner">
+						<div class="titleone">
+							<div class="titleone-inner  js-scroll"><span class="bold">Our Mission</span> {{this.mission1}}</div>
+						</div>
+						<div class="titletwo">
+							<div class="titletwo-inner js-scroll">{{this.mission2}}</div>
+						</div>
+						<div class="titlethree">
+							<div class="titlethree-inner js-scroll">{{this.mission3}}</div>
+						</div>
+						<div class="titlefour">
+							<div class="titlefour-inner js-scroll">{{this.mission4}}</div>
+						</div>
+						<div class="titlefive">
+							<div class="titlefive-inner js-scroll"><span class="myMove">{{this.mission5}}</span></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div id="particle-canvas-mission"></div>
+		<a href="#box1" class="arrowDown">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20px" height="17.651px" viewBox="292.572 372.626 20 17.651" enable-background="new 292.572 372.626 20 17.651" xml:space="preserve">
+				<path fill="#FFFFFF" d="M311.802,390.277h-0.015H293.34c-0.274,0-0.528-0.146-0.664-0.383c-0.139-0.237-0.139-0.529-0.003-0.767  l9.224-16.142c0.273-0.479,1.062-0.479,1.334,0l9.157,16.025c0.114,0.135,0.184,0.309,0.184,0.498  C312.572,389.933,312.227,390.277,311.802,390.277"/>
+			</svg>
+		</a>
+	</section>
+    {{/each}}
+</body>
+
+<!-- <script src="./js/canvas.js"></script> -->
+<script src="/js/canvasValue.js"></script>
+
+<script src="/js/scrollAnimation.js"></script>
+<script src="/js/canvasAddNew.js"></script>
+<script src="/js/smoothScroll.js"></script>
+<!-- <script src="./js/canvasNew.js"></script>
+<script src="./js/canvasValue.js"></script>
+<script src="./js/canvasMission.js"></script>
+<script src='./js/particle-network.min.js'></script> -->
+<script>
+const links = document.querySelectorAll(".arrowDown");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
+</script>
+<link rel="stylesheet" href="/css/splide.min.css">
+<script src="/js/splide.js"></script>
+<script>
+new Splide( '.splideAbout', {
+	type   : 'loop',
+	perPage: 1,
+	perMove: 1,
+	focus  : 'center',
+	gap    : '0',
+	rewindSpeed: 3000,
+	autoplay: true,
+	// autoWidth: true,
+	pagination : false,
+	arrows : false,
+}).mount();
+</script>
+</html>

@@ -1,0 +1,426 @@
+@media only screen and (max-width: 1024px) {
+  .timeline .title {
+    font-size: 20px;
+  }
+
+  .timeline .point .bocata {
+    min-width: 300px;
+    min-height: 150px;
+  }
+
+  .timeline .point:nth-child(odd) .bocata {
+    left: 100px;
+  }
+
+  .timeline .point:nth-child(even) .bocata {
+    right: 400px;
+  }
+  .aboutPartOneDetails .titleone,
+  .aboutPartOneDetails .titletwo,
+  .aboutPartOneDetails .titlethree {
+    width: 100%;
+  }
+  /* .aboutPartOneDetails .title {
+    font-size: 50px;
+  } */
+  .aboutPartTwoDetails .gradientBG .heading {
+    font-size: 80px;
+    line-height: 100px;
+  }
+  .aboutPartThreeDetails {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .timeline .point:nth-child(even) .bocata {
+    left: 100px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .timeline .point:nth-child(odd) .bocata {
+    left: 100px;
+  }
+
+  .timeline {
+    margin: 0 0 0 40px;
+  }
+  .contactLeft {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  .contactRight {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  .expertiseBox {
+    width: 45%;
+    height: 240px;
+  }
+  #map {
+    width: 100%;
+    height: 50vh;
+  }
+  .aboutPartOneDetails .title {
+    font-size: 5.3vw;
+    width: 100%;
+  }
+  .item1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    background-position: center top;
+    height: 500px !important;
+  }
+  .item2 {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  .item3 {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+  }
+  .item4 {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+  }
+  .item5 {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+  }
+  .servicesMain .serviceDetails {
+    padding: 10px;
+  }
+  .servicesTwoMain .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-position: inherit;
+    height: 300px !important;
+  }
+  .servicesTwoMain .item2 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  .servicesTwoMain .item3 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  .servicesTwoMain .item4 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  .servicesTwoMain .serviceDetails {
+    padding: 10px;
+  }
+  .grid-item {
+    height: 300px;
+  }
+  /* .leaderNameDetails {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    } */
+  .leaderNameDetails h2 {
+    font-size: 22px;
+  }
+  .ourPeoplePage ul li {
+    width: 33%;
+  }
+  .expertiseDetailsRow {
+    align-items: flex-start;
+    min-height: auto;
+  }
+  .expertiseDetailsContent {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .expertiseDetailsSlider {
+    width: 100%;
+  }
+  ul.projectList li {
+    width: 50%;
+  }
+  .projectMain .projectItem1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .projectMain .projectItem2 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+  }
+  .projectMain .projectItem3 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  .projectMain .projectItem4 {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+  }
+  .projectMain .projectItem5 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+  .projectMain .projectItem6 {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+  }
+  .projectMain .projectItem7 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  .projectMain .projectItem8 {
+    grid-column: 3 / span 2;
+    grid-row: 4;
+  }
+  .projectMain .projectItem9 {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
+  .projectMain .projectItem10 {
+    grid-column: 3 / span 2;
+    grid-row: 5;
+  }
+  .projectMain .projectItem11 {
+    grid-column: 1 / span 2;
+    grid-row: 6;
+  }
+  .projectMain .projectItem12 {
+    grid-column: 3 / span 2;
+    grid-row: 6;
+  }
+  .projectMain .projectItem13 {
+    grid-column: 1 / span 2;
+    grid-row: 7;
+  }
+  .projectMain .projectItem14 {
+    grid-column: 3 / span 2;
+    grid-row: 7;
+  }
+  .projectMain .projectItem15 {
+    grid-column: 1 / span 2;
+    grid-row: 8;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .col-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .splide__slide .personDetails {
+    left: 0%;
+    right: 0;
+    top: 0%;
+    text-align: center;
+  }
+
+  html.is-ready .c-header_title_line {
+    line-height: 70px;
+  }
+
+  .c-header_title {
+    bottom: 35%;
+  }
+
+  .timeline .point:nth-child(odd) .bocata,
+  .timeline .point:nth-child(even) .bocata {
+    left: 70px;
+  }
+
+  .timeline .point .bocata {
+    top: 0;
+  }
+
+  .timeline .title {
+    font-size: 15px;
+  }
+
+  .timeline .point .bocata {
+    min-width: 230px;
+    min-height: 100px;
+  }
+
+  .contactLeft {
+    height: inherit;
+    min-height: inherit;
+  }
+  .contactRight {
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  #map {
+    width: 100%;
+    height: 80vh;
+  }
+  .contactRight .address {
+    left: 10px;
+    right: 10px;
+  }
+  .expertiseBox {
+    width: 95%;
+    height: 240px;
+  }
+  .aboutPartOneDetails .title {
+    font-size: 10vw;
+  }
+  .aboutPartOneDetails .titleone-inner {
+    -webkit-animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+            animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+  .aboutPartOneDetails .titletwo-inner {
+    -webkit-animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+            animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+  .aboutPartOneDetails .titlethree-inner .myMove {
+    -webkit-animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+            animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+  .aboutPartOneDetails .titlethree-inner .myPush {
+    -webkit-animation: myPush 1s 2s ease-in-out both;
+            animation: myPush 1s 2s ease-in-out both;
+    margin-left: -50px;
+    display: block;
+  }
+  .aboutPartTwoDetails .gradientBG .heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .aboutPartThreeDetails .image.js-scroll.scrolled {
+    margin-bottom: 50px;
+  }
+  .leaderNameDetails {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+  }
+  .leadersocialDetails {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%);
+  }
+  .leadershipDetailsContent {
+    width: 100%;
+  }
+  .leadersocialDetails ul {
+    justify-content: space-around;
+  }
+  .projectDetailsLeft {
+    width: 100%;
+  }
+  .projectDetailsRight {
+    width: 100%;
+  }
+  .projectDetailsHeading h2 {
+    font-size: 22px;
+  }
+  .ourPeoplePage ul li {
+    width: 100%;
+  }
+  ul.projectList li {
+    width: 100%;
+  }
+  .projectMain .projectItem1 {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+  }
+  .projectMain .projectItem2 {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+  }
+  .projectMain .projectItem3 {
+    grid-column: 1 / span 5;
+    grid-row: 3;
+  }
+  .projectMain .projectItem4 {
+    grid-column: 1 / span 5;
+    grid-row: 4;
+  }
+  .projectMain .projectItem5 {
+    grid-column: 1 / span 5;
+    grid-row: 5;
+  }
+  .projectMain .projectItem6 {
+    grid-column: 1 / span 5;
+    grid-row: 6;
+  }
+  .projectMain .projectItem7 {
+    grid-column: 1 / span 5;
+    grid-row: 7;
+  }
+  .projectMain .projectItem8 {
+    grid-column: 1 / span 5;
+    grid-row: 8;
+  }
+  .projectMain .projectItem9 {
+    grid-column: 1 / span 5;
+    grid-row: 9;
+  }
+  .projectMain .projectItem10 {
+    grid-column: 1 / span 5;
+    grid-row: 10;
+  }
+  .projectMain .projectItem11 {
+    grid-column: 1 / span 5;
+    grid-row: 11;
+  }
+  .projectMain .projectItem12 {
+    grid-column: 1 / span 5;
+    grid-row: 12;
+  }
+  .projectMain .projectItem13 {
+    grid-column: 1 / span 5;
+    grid-row: 13;
+  }
+  .projectMain .projectItem14 {
+    grid-column: 1 / span 5;
+    grid-row: 14;
+  }
+  .projectMain .projectItem15 {
+    grid-column: 1 / span 5;
+    grid-row: 15;
+  }
+}
+
+@media (min-width: 375px) {
+  .mainpagenotfound h1 {
+    font-size: calc(9.375rem + ((1vw - 3.75px) * 15.1362));
+    line-height: calc(9.375rem + ((1vw - 3.75px) * 15.1362));
+    min-height: 0vw;
+  }
+
+  .mainpagenotfound h1 .zero {
+    width: calc(9.375rem + ((1vw - 3.75px) * 15.1362));
+    min-height: 0vw;
+  }
+}
+
+@media screen and (max-width: 1169px) {
+  .leaderNameDetails {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+  }
+}

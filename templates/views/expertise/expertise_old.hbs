@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="MP" content="">
+	<title>MP</title>
+	<link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+	<link rel="stylesheet" type="text/css" href="./css/innerpage.css">
+	<link rel="stylesheet" type="text/css" href="./css/media.css">
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
+	<link rel="stylesheet" type="text/css" href="./css/splide.min.css">
+		<!-- Primary Meta Tags -->
+<title>MP Engineers and Architects</title>
+<meta name="title" content="MP Engineers and Architects">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mpengs.nyc/">
+<meta property="og:title" content="MP Engineers and Architects">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mpengs.nyc/">
+<meta property="twitter:title" content="MP Engineers and Architects">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="/images/logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body class="slideOne">
+	<!--		{{>header}}-->
+	{{> new_header}}
+<!-- Section: Main -->
+<div id="app">
+
+	<!-- MODAL -->
+ <!-- <div class="modal" v-show="showModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Letter to Our Patrons</h2>
+      
+    </div>
+    <div class="modal-body">
+      <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius sem sit amet felis bibendum luctus. Pellentesque id ornare eros, eget fringilla nisl. Donec ut risus eu massa interdum tristique. Maecenas sit amet convallis urna. Fusce non diam non ex posuere iaculis eget at velit. Ut ac magna sagittis, dignissim ante eget, ullamcorper nunc. Suspendisse ultricies congue massa, ac rhoncus sapien ullamcorper sed. Nullam sagittis arcu eget dolor fermentum feugiat. Vivamus in massa id nibh ullamcorper malesuada. Nulla facilisi.
+      </p>
+      <p>
+Nulla facilisi. Nam laoreet blandit feugiat. Ut sit amet justo ultrices, sagittis purus nec, commodo eros. Quisque quis libero eu lectus rutrum suscipit. Suspendisse potenti. Aenean ullamcorper vestibulum velit vel faucibus. Phasellus rhoncus malesuada ex eget faucibus. Fusce vehicula massa vitae lorem accumsan consectetur. Sed pellentesque volutpat est, id molestie leo aliquet vel.
+
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button @click="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+ -->
+
+	<!--endmodal-->
+
+<div class="servicesTwoMain">
+	<div class="grid-container">
+		<!-- <a href="#" class="grid-item item1">
+			<div class="serviceDetails">
+				<h2>art of Architecture</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+			</div>
+		</a> -->
+		<a href="/infrastructure" style="pointer-events: none; cursor: default;" class="grid-item item1">
+			<div class="serviceDetails">
+				<h2>Infrastructure Engineering</h2>
+				<p>Our reputation in the industry is built on this expertise.</p>
+			</div>
+		</a>
+		<a href="/advisory" style="pointer-events: none; cursor: default;"  class="grid-item item2">
+			<div class="serviceDetails">
+				<h2>Management</h2>
+				<p>The discipline, organization and experience you can rely on.</p>
+			</div>
+		</a>  
+		<a href="/facilities" style="pointer-events: none; cursor: default;"  class="grid-item item3">
+			<div class="serviceDetails">
+				<h2>Facilities</h2>
+				<p>Shaping the communities and the world we live, work and grow within.</p>
+			</div>
+		</a>
+		<a href="/sustainability" style="pointer-events: none; cursor: default;" class="grid-item item4">
+			<div class="serviceDetails">
+				<h2>Sustainability</h2>
+				<p>Recognizing the most important challenges we face.</p>
+			</div>
+		</a>
+	</div>
+</div>
+</div>
+
+</body>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				message: "Hello World!",
+				showModal: false
+			
+			},
+			mounted() {
+			    this.showModal = true;
+                                var currentUrl = window.location.pathname;
+                                console.log(currentUrl);
+                                var url = 'projects';
+                                var ele = document.getElementById(currentUrl);
+                                ele.id = 'hover';
+			  },
+			  methods: {
+			    closeModal() {
+			      this.showModal = false;
+			    }
+			  },
+			created() {
+				var currentUrl = window.location.pathname;
+				console.log(currentUrl);
+				var url = 'projects';
+				var ele = document.getElementById(currentUrl);
+				ele.id = 'hover';
+			}
+		})
+
+
+
+</script>
+
+<!-- New Slider end -->
+</html>

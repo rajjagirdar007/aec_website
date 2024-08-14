@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+/* Contact page start */
+.contactLeft {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  min-height: calc(100vh - 124px);
+  margin: 0;
+}
+
+.contactLeft h1 {
+  font-size: 40px;
+  color: #084d80;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+.contactLeft h4 {
+  font-size: 14px;
+  color: #084d80;
+  font-weight: normal;
+  margin: 10px 0 0px;
+}
+
+.contactLeft a {
+  font-size: 18px;
+  color: #000;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.contactLeft a:hover {
+  color: #084d80;
+}
+
+.contactLeft ul li a.active {
+  color: #084d80;
+  font-weight: bold;
+}
+
+.contactLeft .email {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+.contactLeftAddress {
+  margin-top: 30px;
+}
+/* .content:not(:first-child) {
+	display: none;
+} */
+.selectSection {
+  position: relative;
+}
+.selectSection li:first-child .content {
+  display: block;
+}
+.selectSection li .content {
+  overflow: hidden;
+  max-height: 0;
+  left: auto;
+  right: 0;
+  width: 280px;
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 0px;
+  margin: 0px
+}
+.selectSection li .content h4 {
+  margin: 0;
+}
+.selectSection li .content a {
+  font-size: 14px;
+}
+.contentSection {
+	display: block;
+}
+.addressMobile {
+  display: none;
+}
+.contactLeftAddress .address h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.contactLeftAddress .address a {
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contactLeftAddress .address h4 span {
+  width: 50px;
+  display: inline-block;
+}
+.contactRight {
+  height: 100%;
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 0;
+}
+
+.contactRight img {
+  width: 100%;
+  height: 100%;
+}
+
+.contactRight .address {
+  position: absolute;
+  left: 36px;
+  bottom: 20px;
+  padding: 10px;
+  z-index: 99;
+  background-color: #fff;
+  padding: 10px;
+  transition: all 1s 3s linear;
+}
+.contactRight .overlayMap.is-open + .address {
+  display: none;
+}
+.contactRight .address h3 {
+  font-size: 16px;
+}
+
+.contactRight .address h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.contactRight .address a {
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contactRight .address h4 span {
+  width: 50px;
+  display: inline-block;
+}
+#map {
+  width: 50vw;
+  height: 100vh;
+}
+
+.overlayMap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s linear;
+  animation: .3s linear overlay06-close;
+}
+.overlayMap.is-open {
+  opacity: 1;
+  visibility: visible;
+  animation: .3s linear overlay06-open;
+}
+
+.open {
+	max-height: min-content;
+	padding: 10px;
+	margin: 10px 0px;
+}
+@keyframes overlay06-open {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+@keyframes overlay06-close {
+  0% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+/* Contact page end */
+
+/* Media css start */
+@media screen and (max-width: 1366px) {
+.selectSection li .content {
+  overflow: hidden;
+  max-height: 0;
+  left: auto;
+  right: 0;
+    position: relative;
+    background-color: #f3f3f3;
+  }
+}
+@media screen and (max-width: 1024px) {
+.selectSection li .content {
+  width: 250px;
+  overflow: hidden;
+  max-height: 0;
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contactLeftAddress {
+    display: none;
+  }
+  .address {
+    display: block;
+    margin: 10px 0;
+  }
+  .contactLeft h4 {
+    margin: 0;
+  }
+  .selectSection li {
+    width: 100%;
+  }
+  .selectSection li .content {
+  overflow: hidden;
+  max-height: 0;
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .contactLeft {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  .contactRight {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  .expertiseBox {
+    width: 45%;
+    height: 240px;
+  }
+  #map {
+    width: 100%;
+    height: 50vh;
+  }
+.open {
+	max-height: min-content;
+	padding: 10px;
+	margin: 7.5px 0px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+  .col-6 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .contactLeft {
+    height: inherit;
+    min-height: inherit;
+  }
+  .contactRight {
+    height: inherit;
+    min-height: inherit;
+    margin-bottom: 62px;
+  }
+  #map {
+    width: 100%;
+    height: 80vh;
+  }
+  .contactRight .address {
+    left: 10px;
+    right: 10px;
+  }
+  .selectSection li .content {
+  overflow: hidden;
+  max-height: 0;
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 0px;
+    margin: 0px;
+  }
+.open {
+	max-height: min-content;
+	padding: 10px;
+	margin: 5px 0px;
+}
+}
+/* Media css end */

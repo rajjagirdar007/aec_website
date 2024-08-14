@@ -1,0 +1,45 @@
+.careers {
+    columns: 2 200px;
+    column-gap: 1rem;
+}
+
+.details {
+    margin: 0 -15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+	
+@media only screen and (max-width: 900px) {
+	.details {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.careers {
+		columns: 1 200px;
+	}
+}
+
+.career_contents {
+    /*-ms-flex: 0 0 50%;
+    flex: 0 0 50%;*/
+    display: inline-block;
+    /*max-width: 50%;*/
+    width: 100%;
+    position: relative;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.detail_contents {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}

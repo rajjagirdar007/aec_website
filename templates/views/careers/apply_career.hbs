@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="MP" content="">
+	<title>MP</title>
+	<link rel="stylesheet" type="text/css" href="/css/home_page/career.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+	<link rel="stylesheet" type="text/css" href="/css/innerpage.css">
+	<link rel="stylesheet" type="text/css" href="/css/media.css">
+		<!-- Primary Meta Tags -->
+<title>MP Engineers and Architects</title>
+<meta name="title" content="MP Engineers and Architects">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mpengs.nyc/">
+<meta property="og:title" content="MP Engineers and Architects">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mpengs.nyc/">
+<meta property="twitter:title" content="MP Engineers and Architects">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="/images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+{{>new_header}}
+<!-- Section: Main -->
+
+	<div class="CareerPage">
+		<div class="container">
+			<h1><a href="/career" style="text-decoration: none; color: #214b7c;">Careers</a></h1>
+			<div class="currentOpeningMain">
+				<div class="details">
+					{{#each data}}
+					<div class="detail_contents">
+						<div class="currentOpeningDetails">
+							<input type="hidden" value="{{{this.id}}}" id="id">
+							<h2>{{this.title}}</h2>
+							<h5>{{this.location}}</h5>
+							<p><span class="bold">Role:</span> {{this.title}}</p>
+							<p><span class="bold">Experience:</span>  {{this.experience}}</p>
+							<p><span class="bold">Key Skills:</span> {{this.key_skills}}</p>
+							<p class="mt-1" style="white-space: pre-wrap"><span class="bold">Description: </span>{{this.desc}}</p>
+						</div>
+					</div>
+					<div class="detail_contents">
+						<div class="currentOpeningBox">
+							<form action="/career/apply/{{this.id}}" method="post" enctype="multipart/form-data">
+							<div class="fieldMain">
+								<div class="details">
+									<input type="hidden" value="{{this.title}}" name="position" id="position">
+									<div class="detail_contents mb-2"><input name="fname" id="fname" type="text" placeholder="First Name" class="textfield"></div>
+									<div class="detail_contents mb-2"><input name="lname" id="lname" type="text" placeholder="Last Name" class="textfield"></div>
+								</div>
+								<div class="details">
+									<div class="detail_contents mb-2"><input name="email" id="email" type="text" placeholder="Email ID" class="textfield"></div>
+									<div class="detail_contents mb-2"><input name="phone" id="phone" type="text" placeholder="Phone Number" class="textfield"></div>
+								</div>
+							</div>
+
+							<div class="fieldMain mb-2">
+								<div class="file-upload">
+									<div class="file-upload-select">
+										<div class="file-select-button" >Upload Resume</div>
+									<div class="file-select-name">No file chosen...</div> 
+									<input type="file" name="file-upload-input" id="file-upload-input">
+									</div>
+								</div>
+							</div>
+							<div class="fieldMain">
+								<button type="submit" class="applyButton">Submit</button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>		
+	</div>
+
+</body>
+
+<!-- File Upload Start -->
+<script>
+let fileInput = document.getElementById("file-upload-input");
+let fileSelect = document.getElementsByClassName("file-upload-select")[0];
+fileSelect.onclick = function() {
+	fileInput.click();
+}
+fileInput.onchange = function() {
+	let filename = fileInput.files[0].name;
+	let selectName = document.getElementsByClassName("file-select-name")[0];
+	selectName.innerText = filename;
+}
+</script>
+<!-- File Upload End -->
+</html>

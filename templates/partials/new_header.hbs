@@ -1,0 +1,90 @@
+
+<header class="header" id="header">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="header-item-left">
+                        <a href="/" class="brand">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" id="Layer_1" x="0px" y="0px" width="40px" height="40px"
+                                viewBox="254.384 375.649 40 40" enable-background="new 254.384 375.649 40 40"
+                                xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M254.384,375.649v40h40v-40H254.384z M261.734,408.148h-3.621l4.884-24.941l7.427,16.818l-1.823,3.992  l-4.373-9.889L261.734,408.148z M275.791,408.148v-2.901h3.749l-1.774-11.103l-6.385,14.003h-6.036v-2.901h3.782l10.078-22.041  l4.388,24.941H275.791z M290.574,394.204c-0.95,1.356-2.342,2.361-3.933,2.838c-0.917,0.273-3.876,0.769-3.876,0.769l-0.576-3.259  c0.893-0.157,1.795-0.292,2.682-0.481c0.843-0.179,1.693-0.454,2.346-1.037c0.671-0.597,1.142-1.408,1.327-2.287  c0.107-0.518,0.116-1.053,0.025-1.575c-0.095-0.519-0.286-1.021-0.563-1.472c-0.475-0.763-1.196-1.362-2.031-1.694  c-0.815-0.324-1.707-0.291-2.559-0.168c-0.897,0.128-1.791,0.309-2.685,0.469l-0.576-3.257c0-0.002,1.012-0.181,1.076-0.193  c0.938-0.168,1.875-0.361,2.83-0.418c1.659-0.099,3.311,0.368,4.669,1.316c1.646,1.148,2.746,2.865,3.099,4.839l0,0v0.002l0,0  C292.168,390.569,291.725,392.563,290.574,394.204z" />
+                            </svg>
+                        </a>
+                        <a class="brand2" href="/">
+                            <div class="writing">
+
+                                <h6>Engineers <span id="plus">+</span> <span id="type"></span></h6>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="header-item-center">
+
+                        <ul :class="{ 'active' : this.minimenu, 'menu': true}">
+                            <li class="list fade" id="about"><a href="/about">About</a></i></li>
+                            <li class="list fade" id="expertise"><a href="/expertise">Expertise</a></i></li>
+                            <li class="list fade" id="projects"><a href="/projects">Projects</a></i></li>
+                            <li class="list fade" id="leadership"><a href="/leadership">People</a></i></li>
+                            <li class="list fade" id="offices"><a href="/offices">Offices</a></i></li>
+                            <li class="list fade" id="careers"><a href="/career">Careers</a></i></li>
+
+
+
+
+                    </div>
+
+                    <div class="header-item-right">
+                        <button type="button" @click="disFunction()" id="mobileMenu"
+                            :class="{ 'activeMenu' : this.minimenu, 'menu-mobile-trigger': true}">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    new Vue({
+      el: '.header',
+      data: {
+        minimenu: false
+      },
+	methods: {
+            disFunction() {
+                this.minimenu = !this.minimenu;
+            }
+
+	}
+    });
+  </script>
+
+<script>
+    var typed = new Typed('#type', {
+        strings: ['Architects', 'Inspectors'],
+        typeSpeed: 170,
+        backSpeed: 100,
+        smartBackspace: true,
+        loop: true,
+        loopCount: Infinity,
+        showCursor: false,
+        cursorChar: '|',
+        autoInsertCss: true
+    });
+</script>
+<script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">
+    const { counterUp } = window.counterUp
+
+    const el = document.querySelector('.counter');
+    //console.log(el);
+    counterUp(el, {
+        duration: 5000,
+        delay: 16,
+    })
+</script>

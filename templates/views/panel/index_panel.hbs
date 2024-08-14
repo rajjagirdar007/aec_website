@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>MPENGS Admin</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">    
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	
+      img {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 5px;
+		width: 150px;
+	}
+
+	img:hover {
+		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+    </style>
+
+    <link href="/css/admin.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	  {{> panelsidebar}}
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+	    
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	      <h1 class="h2">Admin {{username}}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+		  <a href="#" class="btn btn-sm btn-outline-secondary" disabled>Add Slide</a>
+        </div>
+      </div>
+      
+      <table class="table table-hover">
+	      <thead>
+		      <tr>
+			      <th scope="col">Slide Number</th>
+			      <th scope="col">Desktop Left Side</th>
+			      <th scope="col">Desktop Right Side</th>
+			      <th scope="col">Mobile Top </th>
+			      <th scope="col">Mobile Bottom</th>
+			      <th scope="col">Slide Color</th>
+		      </tr>
+	      </thead>
+
+	      <tbody>
+		      {{#each pics}}
+		      <tr>
+			      <td>{{this.slide_no}}</td>
+			      <td>
+				      <img src={{this.d_left_path}}>
+			      </td>
+			      <td>
+				      <img src={{this.d_right_path}}>
+			      </td>
+			      <td>
+				      <img src={{this.m_left_path}}>
+			      </td>
+			      <td>
+				      <img src={{this.m_right_path}}>
+			      </td>
+			      <td>
+					<div style = {{this.hex}}>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+					</div>
+			      </td>
+			      <td>
+				<form action = "/administrator/index_panel/delete" method = "post">
+					<input type = "hidden" name = "slide_no" value = {{this.slide_no}}>
+
+					<button class="btn btn-danger btn-sm" type = "submit">Delete</button>
+				</form>
+			      </td>
+			      <td>
+				      <a href="/administrator/index_panel/edit/{{{this.slide_no}}}" class="btn btn-warning btn-sm">Edit</a>
+			      </td>
+		      </tr>
+		      {{/each}}
+	      </tbody>
+      </table>
+
+<!--
+		{{#each pics}}
+			<h2>Slide {{this.slide_no}}</h2>
+			
+			<form action = "/administrator/index_panel/delete" method = "post">
+				<input type = "hidden" name = "slide_no" value = {{this.slide_no}}>
+
+				<button type = "submit">delete this slide</button>
+			</form>
+
+			<h4>hex code</h4>
+
+			<form action = "/administrator/index_panel/hex" method = "post">
+				<input type = "text" name = "hex" placeholder = "enter hex code">
+				<input type = "hidden" name = "slide_no" value = {{this.slide_no}}>
+
+				<button type = "submit">update hex code</button>
+			</form>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">View</th>
+						<th scope="col">Left Side</th>
+						<th scope="col">Right Side</th>
+						<th scope="col">Slide Color</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Desktop</td>
+						<td>
+							<img src = {{this.d_left_path}}>
+
+							<form id = "change_pictures" action = "/change_pictures" method = "post" enctype = "multipart/form-data">
+								<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+								<input type = "hidden" id = "file_name" name = "file_name" value = {{this.d_left}}>
+							</form>
+						</td>
+						<td>
+							<img src = {{this.d_right_path}}>
+
+
+							<form id = "change_pictures" action = "/change_pictures" method = "post" enctype = "multipart/form-data">
+								<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+								<input type = "hidden" id = "file_name" name = "file_name" value = {{this.d_right}}>
+							</form>
+						</td>
+						<td >
+							<div style = {{this.hex}}>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<th></th>
+						<th>Top Side</th>
+						<th>Bottom Side</th>
+						<th></th>
+					</tr>
+
+					<tr>
+						<td>mobile view</td>
+						<td>
+							<img src = {{this.m_left_path}}>
+							
+
+							<form id = "change_pictures" action = "/change_pictures" method = "post" enctype = "multipart/form-data">
+								<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+								<input type = "hidden" id = "file_name" name = "file_name" value = {{this.m_left}}>
+							</form>
+						</td>
+						<td>
+							<img src = {{this.m_right_path}}>
+
+
+							<form id = "change_pictures" action = "/change_pictures" method = "post" enctype = "multipart/form-data">
+								<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+								<input type = "hidden" id = "file_name" name = "file_name" value = {{this.m_right}}>
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		{{/each}}
+
+-->
+    </main>
+  </div>
+</div>
+	<script src = "/js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script>
+		const form = document.getElementById("add_slide_form");
+		
+		form.style.display = "none";
+
+		function add_slides(ev) {
+			ev.preventDefault();
+
+			if (form.style.display == "none") {
+				form.style.display = "block";
+			} else if (form.style.display == "block") {
+				form.style.display = "none";
+			}
+		}
+	</script>
+  </body>
+</html>
+

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>MPENGS Admin</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">    
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	
+      img {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 5px;
+		width: 150px;
+	}
+
+	img:hover {
+		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+    </style>
+
+    <link href="/css/admin.css" rel="stylesheet">
+  </head>
+  <body>
+	  {{> panelsidebar}}    
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+	    
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	      <h1 class="h2">Admin {{username}}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+		  <a href="/panel/people" class="btn btn-sm btn-outline-secondary">All Members</a>
+        </div>
+      </div>
+      {{#each r}}
+              <input type="hidden" value={{id}} id="id">
+
+	      <label for="first_name">First Name</label>
+	      <input type="text" class="form-control edit" id="first_name" value="{{{this.first_name}}}" onchange="make_edit(event, this.id)">
+	      <br>
+
+	      <label for="last_name">Last Name</label>
+	      <input type="text" class="form-control edit" id="last_name" value="{{{this.last_name}}}" onchange="make_edit(event, this.id)">
+	      <br>
+
+	      <label for="role">Role</label>
+	      <input type="text" class="form-control edit" id="role" value="{{{this.role}}}" onchange="make_edit(event, this.id)">
+	      <br>
+
+	      <label for="description">Description</label>
+	      <textarea class="form-control edit" id="description" rows="6" onchange="make_edit(event, this.id)">{{this.description}}</textarea>
+	      <br>
+
+		
+	      <table class="table table-hover">
+		      <thead>
+			      <tr>
+				      <th scope="col">Picture Type</th>
+				      <th scope="col">Picture Preview</th>
+			      </tr>
+		      </thead>
+
+		      <tbody>
+			      <tr>
+				      <td>Leadership</td>
+				      <td>
+					      <img src="/images/people/leadership/{{{this.leadership_picture}}}">
+				      </td>
+				      <td>
+					      {{#if ../lead_status}}
+					<form action = "/panel/people/edit/picture" method = "post" enctype = "multipart/form-data">
+						<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+						<input type="hidden" name="file_type" value="leadership">
+						<input type="hidden" name="id" value={{this.id}}>
+						<input type = "hidden" id = "file_name" name = "file_name" value = "/images/people/leadership/{{{this.leadership_picture}}}">
+					</form>
+					{{/if}}
+				      </td>
+			      </tr>
+
+			      <tr>
+				      <td>Personal</td>
+				      <td>
+					      <img src="/images/people/personal/{{{this.personal_picture}}}">
+				      </td>
+				      <td>
+					      {{#if ../lead_status}}
+					<form action = "/panel/people/edit/picture" method = "post" enctype = "multipart/form-data">
+						<input type = "file" name = "file_upload" id = "file_upload" onchange = "this.form.submit()">
+						<input type="hidden" name="file_type" value="personal">
+						<input type="hidden" name="id" value={{this.id}}>
+						<input type = "hidden" id = "file_name" name = "file_name" value = "/images/people/personal/{{{this.personal_picture}}}">
+					</form>
+					{{/if}}
+				      </td>
+			      </tr>
+		      </tbody>
+	      </table>
+
+	   {{/each}}
+    </main>
+  </div>
+</div>
+	<script src = "/js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="/js/people_update.js"></script>
+  </body>
+</html>
+

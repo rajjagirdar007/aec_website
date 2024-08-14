@@ -1,0 +1,545 @@
+
+:root {
+  --slideOne: #d2d2d2;
+  --slideTwo: #f19b90;
+  --slideThree: #882112;
+  --slideFour: #3f8e91;
+  --headerOne: #000;
+  --headerTwo: #800022;
+  --headerThree: #993b00;
+  --headerFour: #693333;
+}
+.slideOne {background-color: var(--slideOne);}
+.slideTwo {background-color: var(--slideTwo);}
+.slideThree {background-color: var(--slideThree);}
+.slideFour {background-color: var(--slideFour);}
+
+.slideOne header ul.menu .list a {color: var(--headerOne);}
+.slideOne header ul.menu .list .ddContent {color: var(--headerOne);}
+.slideTwo header ul.menu .list a {color: var(--headerTwo);}
+.slideTwo header ul.menu .list .ddContent {color: var(--headerTwo);}
+.slideThree header ul.menu .list a {color: var(--headerThree);}
+.slideThree header ul.menu .list .ddContent {color: var(--headerThree);}
+.slideFour header ul.menu .list a {color: var(--headerFour);}
+.slideFour header ul.menu .list .ddContent {color: var(--headerFour);}
+
+html, body {
+  overflow: hidden;
+}
+.main {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 62px 0;
+}
+.page-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-slider {
+  height: 100%;
+  /* height: calc(100vh - 124px); */
+  width: 90vw;
+  position: relative;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left Part Start */
+.inright {
+  animation: goInL 1.7s ease-in-out;
+  -webkit-animation: goInL 1.7s ease-in-out;
+  position: relative;
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes goInL {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes goInL {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.outright {
+  animation: goOutL 1.7s ease-in-out;
+  -webkit-animation: goOutL 1.7s ease-in-out;
+  position: relative;
+  z-index: 200;
+}
+
+@-webkit-keyframes goOutL {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes goOutL {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.inleft {
+  animation: goInR 1.7s ease-in-out;
+  -webkit-animation: goInR 1.7s ease-in-out;
+  position: relative;
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes goInR {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes goInR {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.outleft {
+  animation: goOutR 1.7s ease-in-out;
+  -webkit-animation: goOutR 1.7s ease-in-out;
+  position: relative;
+  z-index: 200;
+}
+
+@-webkit-keyframes goOutR {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes goOutR {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+/* Left Part End */
+
+/* Right Part Start */
+.rightinright {
+  animation: rightgoInL 1.7s ease-in-out;
+  -webkit-animation: rightgoInL 1.7s ease-in-out;
+  position: relative;
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes rightgoInL {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes rightgoInL {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.rightoutright {
+  animation: rightgoOutL 1.7s ease-in-out;
+  -webkit-animation: rightgoOutL 1.7s ease-in-out;
+  position: relative;
+  z-index: 200;
+}
+
+@-webkit-keyframes rightgoOutL {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+@keyframes rightgoOutL {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+.rightinleft {
+  animation: rightgoInR 1.7s ease-in-out;
+  -webkit-animation: rightgoInR 1.7s ease-in-out;
+  position: relative;
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes rightgoInR {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes rightgoInR {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+.rightoutleft {
+  animation: rightgoOutR 1.7s ease-in-out;
+  -webkit-animation: rightgoOutR 1.7s ease-in-out;
+  position: relative;
+  z-index: 200;
+}
+
+@-webkit-keyframes rightgoOutR {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes rightgoOutR {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+/* Right Part End */
+
+
+.pic {
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+}
+.pic:first-child {
+  z-index: 100;
+}
+.left-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+.desktopView {
+  display: block;
+}
+.mobileView {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .desktopView {
+    display: none;
+  }
+  .mobileView {
+    display: block;
+  }
+  .left-slide {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    top: 0vh !important;
+    flex-wrap: nowrap;
+  }
+  .right-slide {
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top:50%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Left Part Start */
+.inright {
+  animation: goInL 1.7s ease-in-out;
+  -webkit-animation: goInL 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes goInL {
+  0% {
+    left: -100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes goInL {
+  0% {
+    left: -100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.outright {
+  animation: goOutL 1.7s ease-in-out;
+  -webkit-animation: goOutL 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 200;
+}
+
+@-webkit-keyframes goOutL {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+
+@keyframes goOutL {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+.inleft {
+  animation: goInR 1.7s ease-in-out;
+  -webkit-animation: goInR 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes goInR {
+  0% {
+    left: 100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes goInR {
+  0% {
+    left: 100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.outleft {
+  animation: goOutR 1.7s ease-in-out;
+  -webkit-animation: goOutR 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 200;
+}
+
+@-webkit-keyframes goOutR {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: -100%;
+    top: 0;
+  }
+}
+
+@keyframes goOutR {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: -100%;
+    top: 0;
+  }
+}
+/* Left Part End */
+
+/* Right Part Start */
+.rightinright {
+  animation: rightgoInL 1.7s ease-in-out;
+  -webkit-animation: rightgoInL 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes rightgoInL {
+  0% {
+    left: 100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes rightgoInL {
+  0% {
+    left: 100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.rightoutright {
+  animation: rightgoOutL 1.7s ease-in-out;
+  -webkit-animation: rightgoOutL 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 200;
+}
+
+@-webkit-keyframes rightgoOutL {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: -100%;
+    top: 0;
+  }
+}
+
+@keyframes rightgoOutL {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: -100%;
+    top: 0;
+  }
+}
+.rightinleft {
+  animation: rightgoInR 1.7s ease-in-out;
+  -webkit-animation: rightgoInR 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 300 !important;
+}
+
+@-webkit-keyframes rightgoInR {
+  0% {
+    left: -100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes rightgoInR {
+  0% {
+    left: -100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.rightoutleft {
+  animation: rightgoOutR 1.7s ease-in-out;
+  -webkit-animation: rightgoOutR 1.7s ease-in-out;
+  /* position: relative; */
+  z-index: 200;
+}
+
+@-webkit-keyframes rightgoOutR {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+
+@keyframes rightgoOutR {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+/* Right Part End */
+  
+}

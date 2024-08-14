@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="MP" content="">
+	<title>MP</title>
+	<link rel="stylesheet" type="text/css" href="/css/home_page/career.css">
+    <link rel="stylesheet" type="text/css" href="/css/home_page/headertest.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/styletest.css">
+	<link rel="stylesheet" type="text/css" href="/css/home_page/ionicon.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/innerpage.css">
+	<link rel="stylesheet" type="text/css" href="./css/media.css">
+		<!-- Primary Meta Tags -->
+<title>MP Engineers and Architects</title>
+<meta name="title" content="MP Engineers and Architects">
+<meta name="description" content="">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mpengs.nyc/">
+<meta property="og:title" content="MP Engineers and Architects">
+<meta property="og:description" content="">
+<meta property="og:image" content="/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.mpengs.nyc/">
+<meta property="twitter:title" content="MP Engineers and Architects">
+<meta property="twitter:description" content="">
+<meta property="twitter:image" content="/images/logo.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<!--	{{>header}}-->
+	{{> new_header}}
+
+<!-- Section: Main -->
+
+	<div class="CareerPage">
+		<div class="container">
+			<h1>Careers</h1>
+			<div class="currentOpeningMain">
+				<div class="careers">
+					{{#each data}}
+					<div class="career_contents">
+						<div class="currentOpeningBox">
+							<h3>{{this.title}}</h3>
+							<h5>{{this.location}}</h5>
+							<p><span class="bold">Role:</span> {{this.title}}</p>
+							<p><span class="bold">Experience:</span>  {{this.experience}}</p>
+							<p><span class="bold">Key Skills:</span> {{this.key_skills}}</p>
+							<a href="/career/apply/{{{this.id}}}" class="applyButton mt-1">Apply Now</a>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>		
+	</div>
+
+</body>
+
+
+
+</html>

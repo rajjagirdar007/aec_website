@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>MPENGS Admin</title>
+
+
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">    
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	
+      img {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 5px;
+		width: 150px;
+	}
+
+	img:hover {
+		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	}
+    </style>
+
+    <link href="/css/admin.css" rel="stylesheet">
+  </head>
+  <body>
+    
+	  {{> panelsidebar}}
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+	    
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	      <h1 class="h2">Admin {{username}}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+		  <a href="/panel/people/add" class="btn btn-sm btn-outline-secondary">Add Team Member</a>
+        </div>
+      </div>
+      
+      <table class="table table-hover">
+	      <thead>
+		      <tr>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Leadership Role</th>
+			      <th scope="col">Leadership Picture Preview</th>
+			      <th scope="col">Personal Picture Preview</th>
+		      </tr>
+	      </thead>
+
+	      <tbody>
+		      {{#each row}}
+		      <tr>
+			      <td>{{this.first_name}}</td>
+			      <td>{{this.last_name}}</td>
+			      <td>{{this.role}}</td>
+			      <td>
+				      <img src="/images/people/leadership/{{{this.leadership_picture}}}">
+			      </td>
+			      <td>
+				      <img src="/images/people/personal/{{{this.personal_picture}}}">
+			      </td>
+			      <td>
+				      <a href="/panel/people/delete/leader/{{{this.id}}}" class="btn btn-danger btn-sm">Delete</a>
+			      </td>
+			      <td>
+				      <a href="/panel/people/edit/leader/{{{this.id}}}" class="btn btn-warning btn-sm">Edit</a>
+			      </td>
+		      </tr>
+		      {{/each}}
+
+		      {{#each employee}}
+		      <tr>
+			      <td>{{this.first_name}}</td>
+			      <td>
+				      {{#if this.last_name}}
+					      {{this.last_name}}
+				      {{/if}}
+			      </td>
+			      <td>{{this.role}}</td>
+			      <td>
+				      <img src="/images/people/leadership/{{{this.leadership_picture}}}">
+			      </td>
+			      <td>
+				      {{#if this.personal_picture}}
+				      <img src="/images/people/personal/{{{this.personal_picture}}}">
+				      {{/if}}
+			      </td>
+			      <td>
+				      <a href="/panel/people/delete/employee/{{{this.id}}}" class="btn btn-danger btn-sm">Delete</a>
+			      </td>
+			      <td>
+				      <a href="/panel/people/edit/employee/{{{this.id}}}" class="btn btn-warning btn-sm">Edit</a>
+			      </td>
+		      </tr>
+		      {{/each}}
+			      
+	      </tbody>
+      </table>
+      
+    </main>
+  </div>
+</div>
+	<script src = "/js/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
